@@ -1,85 +1,178 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="utf-8">
-    <title>سيمفونية الصمت</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0b0b0b;
-            color: #ffffff;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            padding: 60px 20px;
-            background: linear-gradient(to bottom, #111, #000);
-        }
+<title>Symphony Of Silence</title>
 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+<style>
 
-        p {
-            font-size: 18px;
-            color: #cccccc;
-            max-width: 700px;
-            margin: auto;
-            line-height: 1.6;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-        section {
-            padding: 40px 20px;
-        }
+body{
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
 
-        .box {
-            background: #1a1a1a;
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 800px;
-            border-radius: 12px;
-        }
+header{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
+url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1974&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+}
 
-        footer {
-            padding: 20px;
-            font-size: 14px;
-            color: #888;
-        }
-    </style>
+.hero{
+max-width:900px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+color:#00d4ff;
+}
+
+.hero p{
+font-size:1.3rem;
+line-height:2;
+color:#ddd;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#00d4ff;
+color:#000;
+font-weight:bold;
+text-decoration:none;
+border-radius:12px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+background:white;
+}
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+font-size:2.5rem;
+margin-bottom:50px;
+color:#00d4ff;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#11182f;
+padding:30px;
+border-radius:20px;
+transition:.3s;
+border:1px solid rgba(255,255,255,.1);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#00d4ff;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#02040d;
+color:#999;
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>سيمفونية الصمت</h1>
-    <p>
-        منصة رقمية لعرض مشروع بحثي وفني يهدف إلى تقديم تجربة تفاعلية تجمع بين المعرفة والإبداع.
-    </p>
+<div class="hero">
+
+<h1>Symphony Of Silence</h1>
+
+<p>
+منصة بحثية وتجريبية لاستكشاف التفاعل المعرفي
+والتفاوض بين البشر والنماذج الذكية.
+</p>
+
+<a class="btn" href="#about">
+ابدأ الاستكشاف
+</a>
+
+</div>
 </header>
 
-<section>
-    <div class="box">
-        <h2>عن المشروع</h2>
-        <p>
-            هذا المشروع يهدف إلى بناء فضاء تفاعلي يعرض الأفكار بطريقة منظمة وواضحة،
-            مع إمكانية تطويره لاحقاً ليصبح منصة كاملة متعددة الأقسام.
-        </p>
-    </div>
+<section id="about">
 
-    <div class="box">
-        <h2>الأهداف</h2>
-        <p>
-            • عرض المحتوى بشكل بصري بسيط<br>
-            • تنظيم الأفكار البحثية<br>
-            • تمهيد لبناء منصة متكاملة
-        </p>
-    </div>
+<h2 class="section-title">
+عن المشروع
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>الذكاء التفاعلي</h3>
+<p>
+دراسة التفاعل بين المستخدم والأنظمة الذكية
+ضمن بيئات متعددة.
+</p>
+</div>
+
+<div class="card">
+<h3>المؤشرات الكمية</h3>
+<p>
+تطوير مؤشرات تجريبية لتحليل جودة الحوار
+والاستجابة.
+</p>
+</div>
+
+<div class="card">
+<h3>التفاوض المعرفي</h3>
+<p>
+بناء نماذج مفاهيمية للتعاون والتفاوض
+بين الكيانات المختلفة.
+</p>
+</div>
+
+</div>
+
 </section>
 
 <footer>
-    جميع الحقوق محفوظة
+
+<p>
+© 2026 Symphony Of Silence
+</p>
+
 </footer>
 
 </body>
