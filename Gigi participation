@@ -1,86 +1,193 @@
 <!doctype html>
+
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="utf-8">
-    <title>سيمفونية الصمت</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0b0b0b;
-            color: #ffffff;
-            text-align: center;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سيمفونية الصمت</title><style>
+:root{
+    --bg:#0b0b0f;
+    --card:#151520;
+    --accent:#7c5cff;
+    --text:#ffffff;
+    --muted:#b9b9c9;
+}
 
-        header {
-            padding: 60px 20px;
-            background: linear-gradient(to bottom, #111, #000);
-        }
+*{box-sizing:border-box;scroll-behavior:smooth;}
 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
 
-        p {
-            font-size: 18px;
-            color: #cccccc;
-            max-width: 700px;
-            margin: auto;
-            line-height: 1.6;
-        }
+header{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+    background: radial-gradient(circle at top, #1a1a2e, #0b0b0f);
+}
 
-        section {
-            padding: 40px 20px;
-        }
+h1{
+    font-size:48px;
+    margin:0;
+}
 
-        .box {
-            background: #1a1a1a;
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 800px;
-            border-radius: 12px;
-        }
+.subtitle{
+    color:var(--muted);
+    max-width:700px;
+    margin-top:15px;
+    line-height:1.7;
+}
 
-        footer {
-            padding: 20px;
-            font-size: 14px;
-            color: #888;
-        }
-    </style>
-</head>
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
 
-<body>
+nav .logo{
+    font-weight:bold;
+    color:var(--accent);
+}
 
-<header>
+nav ul{
+    display:flex;
+    gap:15px;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+nav a{
+    color:var(--text);
+    text-decoration:none;
+    font-size:14px;
+}
+
+section{
+    padding:80px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:var(--card);
+    padding:25px;
+    margin:20px 0;
+    border-radius:16px;
+    transition:0.3s;
+    opacity:0;
+    transform:translateY(30px);
+}
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card:hover{
+    transform:scale(1.02);
+}
+
+h2{
+    color:var(--accent);
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:var(--muted);
+}
+
+.menu-btn{
+    display:none;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    nav ul{
+        display:none;
+        flex-direction:column;
+        background:#111;
+        position:absolute;
+        top:60px;
+        right:10px;
+        padding:10px;
+        border-radius:10px;
+    }
+    nav ul.active{
+        display:flex;
+    }
+    .menu-btn{
+        display:block;
+    }
+}
+
+</style></head><body><nav>
+    <div class="logo">سيمفونية الصمت</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <ul id="menu">
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#about">عن المشروع</a></li>
+        <li><a href="#goals">الأهداف</a></li>
+        <li><a href="#contact">تواصل</a></li>
+    </ul>
+</nav><header id="home">
     <h1>سيمفونية الصمت</h1>
-    <p>
-        منصة رقمية لعرض مشروع بحثي وفني يهدف إلى تقديم تجربة تفاعلية تجمع بين المعرفة والإبداع.
+    <p class="subtitle">
+        منصة رقمية تفاعلية لعرض مشروع بحثي وفني يجمع بين المعرفة والإبداع في تجربة حديثة.
     </p>
-</header>
-
-<section>
-    <div class="box">
+</header><section id="about">
+    <div class="card">
         <h2>عن المشروع</h2>
         <p>
-            هذا المشروع يهدف إلى بناء فضاء تفاعلي يعرض الأفكار بطريقة منظمة وواضحة،
-            مع إمكانية تطويره لاحقاً ليصبح منصة كاملة متعددة الأقسام.
+            هذا المشروع يبني فضاءً رقمياً تفاعلياً لعرض الأفكار بطريقة حديثة ومنظمة،
+            مع إمكانية التوسع إلى منصة متعددة الأقسام.
         </p>
     </div>
-
-    <div class="box">
+</section><section id="goals">
+    <div class="card">
         <h2>الأهداف</h2>
         <p>
-            • عرض المحتوى بشكل بصري بسيط<br>
+            • عرض المحتوى بشكل بصري حديث<br>
             • تنظيم الأفكار البحثية<br>
-            • تمهيد لبناء منصة متكاملة
+            • إنشاء تجربة مستخدم تفاعلية
         </p>
     </div>
-</section>
+</section><section id="contact">
+    <div class="card">
+        <h2>تواصل</h2>
+        <p>يمكن تطوير هذا القسم لاحقاً لإضافة نموذج تواصل مباشر.</p>
+    </div>
+</section><footer>
+    جميع الحقوق محفوظة - سيمفونية الصمت
+</footer><script>
+function toggleMenu(){
+    document.getElementById('menu').classList.toggle('active');
+}
 
-<footer>
-    جميع الحقوق محفوظة
-</footer>
+const cards = document.querySelectorAll('.card');
 
-</body>
+window.addEventListener('scroll',()=>{
+    cards.forEach(c=>{
+        const top = c.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            c.classList.add('show');
+        }
+    });
+});
+</script></body>
 </html>
