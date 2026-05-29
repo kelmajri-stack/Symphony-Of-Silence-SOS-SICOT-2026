@@ -1,0 +1,20 @@
+{
+  "name": "symphony-of-silence",
+  "version": "1.0.0",
+  "description": "منصة بحثية لاستكشاف التفاعل المعرفي والتفاوض بين البشر والنماذج الذكية",
+  "main": "index.html",
+  "scripts": {
+    "start": "node -m http.server",
+    "build": "echo 'No build needed'",
+    "dev": "vercel dev"
+  },
+  "author": "kelmajri-stack",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "vercel": "^latest"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
